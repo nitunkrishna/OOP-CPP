@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+class object
+{
+    int a, b;
+public:
+    int c, d;
+    void setdata(int x, int y)
+    {
+        a=x;
+        b=y;
+    }
+    void getdata()
+    {
+        cout << "Value of a : " << a << endl;
+        cout << "Value of b : " << b << endl;
+        cout << "Value of c : " << c << endl;
+        cout << "Value of d : " << d << endl;
+    }
+};
+
+int main()
+{
+    object ob;
+    ob.setdata(0, 0);
+    ob.c=5;
+    ob.d=6;
+    ob.getdata();
+    return 0;
+}
