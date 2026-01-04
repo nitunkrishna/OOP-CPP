@@ -1,0 +1,41 @@
+#include<iostream>
+
+using namespace std;
+
+class object
+{
+    int code;
+    static int cnt;
+public:
+    void set(void)
+    {
+        cout << "Enter Object id: ";
+        cin >> code;
+        cnt++;
+    }
+    void showobject(void)
+    {
+        cout << "Object id : "<< code << endl;
+    }
+    static void showcount(void) // Declaring a Static Class Function
+    {
+        cout << "Value of Count = " << cnt << endl;
+    }
+};
+
+int object :: cnt; // Initially count=0
+
+int main()
+{
+    object ob1, ob2, ob3;
+    ob1.set();
+    object :: showcount(); // Calling a Static Class Function
+    ob2.set();
+    object :: showcount();
+    ob3.set();
+    object :: showcount();
+    ob1.showobject();
+    ob2.showobject();
+    ob3.showobject();
+    return 0;
+}
