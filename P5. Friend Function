@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class Student
+{
+private:
+    int marks;
+public:
+    Student(int m)
+    {
+        marks=m;
+    }    
+    friend void showMarks(Student s); // friend function declaration
+};
+
+void showMarks(Student s) // friend function definition
+{
+    cout << "Student Marks: " << s.marks << endl;
+}
+
+int main()
+{
+    Student s(85);
+    showMarks(s); // friend function call
+    return 0;
+}
